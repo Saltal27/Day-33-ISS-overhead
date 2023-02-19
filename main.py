@@ -4,6 +4,8 @@ import smtplib
 
 MY_LAT = 33.510414
 MY_LONG = 36.278336
+MY_EMAIL = "pythontest32288@gmail.com"
+MY_RENAME = "gsrfzucledwimgqp"
 
 
 def check_pos():
@@ -37,13 +39,10 @@ def check_dark():
 
 
 def send_iss_mail():
-    my_email = "pythontest32288@gmail.com"
-    my_password = "gsrfzucledwimgqp"
-
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
-        connection.login(user=my_email, password=my_password)
-        connection.sendmail(from_addr=my_email,
+        connection.login(user=MY_EMAIL, password=MY_RENAME)
+        connection.sendmail(from_addr=MY_EMAIL,
                             to_addrs="omarmobarak53@gmail.com",
                             msg="Subject:ISS!\n\nLook up!\nYou can see the ISS in the sky right now"
                             )
